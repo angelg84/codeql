@@ -3,9 +3,9 @@ import sys
 
 
 def test(codeql, java):
-    # This serves the "repo" directory on http://localhost:9427
+    # This serves the "repo" directory on http://localhost:9425
     repo_server_process = subprocess.Popen(
-        [sys.executable, "-m", "http.server", "9427"], cwd="repo"
+        [sys.executable, "-m", "http.server", "9425"], cwd="repo"
     )
     try:
         codeql.database.create(
